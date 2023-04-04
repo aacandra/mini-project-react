@@ -1,0 +1,35 @@
+.myBG {
+    height: 100vh;
+    background: url(./assets/asset-1.jpeg);
+    background-size: cover;
+}
+
+.jumbo {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittle {
+    padding: 20px;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 2px 2px black;
+    letter-spacing: 3px;
+}
+
+.second-tittle {
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 2px 2px black
+}
+
+.trending {
+    background: black;
+    margin-top: 337px;
+    padding: 20px;
+    
+}
