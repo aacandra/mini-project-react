@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Navigationbar from './components/NavigationBar'
+import NavigationBar from './components/NavigationBar'
 import "./style.css"
 import Axios from 'axios'
+import Footer from './components/Footer'
+
 
 
 function App() {
@@ -34,8 +36,8 @@ function App() {
           <div className="vote-average" >{movie.vote_average}</div>
           </div>
         <div className="overview">
-          <div><h4 className='overviews'>Overview:</h4>
-          </div>
+          <div><p className='movie-id'>Movie ID:{movie.id}</p></div>
+          <div><h4 className='overviews'>Overview:</h4></div>
           <div><p className='overview-info'>{movie.overview}</p>
           </div>
           
@@ -49,7 +51,7 @@ function App() {
   
   return (
     <div className="myBG">
-      <Navigationbar/>
+      {/* <NavigationBar/> */}
           <div className="jumbo">
             <container className="text-white d-flex justify-content-center" > 
               <row>
@@ -67,6 +69,12 @@ function App() {
      <div className="trending-card">           
        {trendingMoviesList()}
      </div>
+    </div>
+    <div className='footer'>
+      <div>
+        <Footer/>
+      </div>
+
     </div>
     </div>
     
