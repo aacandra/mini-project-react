@@ -140,10 +140,23 @@ background-color: black;
     background: url(./assets/asset-13.jpg);
   }
 
-  .form-main {
+  .login-form {
     margin: 150px;
     padding: 20px;
     background-color: #1999c7b7;
     font-size: 18px;
     font-weight: 500;
+  }
+
+  .input-form {
+    height: 50px;
+    width: 95%;
+    font-size: 18px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .validate-input{
+    position: relative;
   }
