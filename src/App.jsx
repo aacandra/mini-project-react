@@ -16,7 +16,7 @@ function App() {
        url: 'https://api.themoviedb.org/3/trending/movie/week?api_key=1e05d6c6fe757614cf08f4083d927aaf',
       })
        .then(function (response) {
-       console.log(response.data.results)
+       console.log(response)
        setTrendingMovies(response.data.results)
       });
   }, [])  
