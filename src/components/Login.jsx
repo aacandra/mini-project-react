@@ -7,8 +7,8 @@ import Account from './Account'; // import komponen Account
 
 const Login = () => {
   const navigate = useNavigate(); // inisialisasi useNavigate
-  const [loginStatus, setLoginStatus] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // state untuk menentukan apakah user sudah berhasil login atau belum
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');  
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -25,26 +25,22 @@ const Login = () => {
         password: password,
         request_token: request_token
       })
-      .then(response => {
-        if (response.status === 200) {
-          setLoginStatus('Login successful!');
-          setIsLoggedIn(true); 
-          navigate('/account'); // gunakan useNavigate untuk mengarahkan user ke path /account
-        } else {
-          setLoginStatus('Login failed!');
-        }
-        console.log(response.config.data); 
+
+      .then(result => {
+         console.log(result.data); 
+         alert('Succesful')
+         localStorage.setItem('token', result.data.request_token)
+         navigate('/account')
       })
       .catch(error => {
+        alert('Service Error')
         console.log(error);
-        setLoginStatus('Login failed!');
+         
       });
     },
   });
 
-  useEffect(() => {
-    document.getElementById("login-message").innerHTML = loginStatus;
-  }, [loginStatus]);
+   
 
   return (
     <>

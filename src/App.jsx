@@ -4,6 +4,7 @@ import NavigationBar from './components/NavigationBar'
 import "./style.css"
 import Axios from 'axios'
 import Footer from './components/Footer'
+import { Carousel } from 'react-bootstrap'
 
 
 
@@ -50,9 +51,9 @@ function App() {
   console.log({trendingMovies: trendingMovies})  
   
   return (
+       
     <div className="myBG">
-      {/* <NavigationBar/> */}
-          <div className="jumbo">
+         <div className="jumbo">
             <container className="text-white d-flex justify-content-center" > 
               <row>
                 
@@ -60,6 +61,9 @@ function App() {
                  <div className='second-tittle'>Millions of movies, TV shows and people to discover. Explore now.</div>
               </row>
             </container>
+          </div>
+          <div>
+            {/* <Carousel/> */}
           </div>
     
    <div className="trending">
