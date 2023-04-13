@@ -2,18 +2,23 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-.myBG {
-    height: 100vh;
-    background: url(./assets/asset-1.jpeg);
-    background-size: cover;
+.myApp {
+    margin: 0; 
+    background-image: linear-gradient(-180deg, rgb(21, 24, 24), rgb(7, 75, 100));
+    
 } 
 
 .jumbo {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  padding : 10px;
 }
+
+.carousel-caption {
+  bottom: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
 
 .tittle {
     padding: 20px;
@@ -32,10 +37,12 @@
 }
 
 
-.trending-card {
- display: flex;
- flex-wrap: wrap;   
- gap: 15px;   
+.trending-cards {
+ display: grid;
+ margin-left: 50px; 
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ grid-gap: 2rem;
+ margin-top: 2rem;
 }
 
 
@@ -116,7 +123,7 @@ background-color: black;
 
   .main-footer {
     margin-top: 100px;
-    background-color: #000000;
+    background-color: transparent;
   }
   
   ul {
@@ -184,9 +191,12 @@ background-color: black;
     display: flex;
     padding: 15px;
     margin: 100px;
-    width: 50%;
+    width: 80%;
+    height: 250px;
     background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
-    border-radius: 10px;   
+    border-radius: 10px;  
+    justify-content: center;
+    align-items: center; 
   }
 
   .account-content img{
@@ -201,7 +211,7 @@ background-color: black;
   } 
 
   .carousel {
-    height: 1200px;
+    height: 500px;
     width: 100%;
     
   }
@@ -211,8 +221,11 @@ background-color: black;
   }
 
   .logout-button{
-    width: 80px;
-    height: 30px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
     background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
     color: white;
+   justify-content: center;
+    margin-left: 250px;
   }

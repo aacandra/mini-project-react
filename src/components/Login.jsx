@@ -28,12 +28,12 @@ const Login = () => {
 
       .then(result => {
          console.log(result.data); 
-         alert('Succesful')
+         alert('Login Succesful')
          localStorage.setItem('token', result.data.request_token)
          navigate('/account')
       })
       .catch(error => {
-        alert('Service Error')
+        alert('Service Error, Username dan Password did not match ')
         console.log(error);
          
       });

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+
 
 
 const AccountDetail = () => {
@@ -52,7 +52,8 @@ const AccountDetail = () => {
       <button className='logout-button'
       onClick={() =>{
         localStorage.removeItem('token')
-
+        navigate('/login');
+        alert("Logout success!");
       } }>LOGOUT</button>
     </div>
     
