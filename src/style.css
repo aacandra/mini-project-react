@@ -139,6 +139,12 @@ background-color: black;
     color: aliceblue;
 } 
 
+@media screen and (max-width: 360px) {
+  .main-footer {
+    margin-top: 30px;
+  }
+}
+
 .nav-link {
     color: white;
     text-decoration: none;
