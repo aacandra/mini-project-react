@@ -11,10 +11,11 @@ const Footer = () => {
         <Row>
           <Col>
             <img src="./src/assets/logo-nextstream.png" alt="Logo" width="150" height="50" />
-            <h5>We Serve For Beter Future</h5>
+            <h6>FE Batch 12</h6>
+            <h6>Bootcamp dibimbing.id</h6>
           </Col>
           <Col>
-            <h5>Follow Us</h5>
+            <h6>Follow Us</h6>
             <ul>
               <li>
                 <a href="https://www.instagram.com/your_account/" target="_blank" rel="noopener noreferrer">

@@ -17,7 +17,7 @@ function TrendingMoviesList() {
 
   return (
     <div className="trending">
-      <h2>Trending</h2>
+      <h3>Trending</h3>
       <div className="trending-cards">
         {trendingMovies.map((movie, i) => (
           <div key={i} className="trending-card">
