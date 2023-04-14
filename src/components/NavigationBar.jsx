@@ -11,7 +11,7 @@ const NavigationBar = () => {
         <Container>
         <Navbar.Brand href="/">
   <img
-    src="./src/assets/logo-nextstream.png"
+    src="E:\Users\asep\Desktop\project web\bootcamp-new\react_mini_project\mini-project-react\src\assets"
     alt="Logo Nextstream"
     height="50"
     className="d-inline-block align-top"
