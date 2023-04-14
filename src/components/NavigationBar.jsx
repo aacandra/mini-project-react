@@ -9,14 +9,10 @@ const NavigationBar = () => {
             <Container>
         <Navbar variant="dark" expand="lg">
         <Container>
-        <Navbar.Brand href="/">
-  <img
-    src="E:\Users\asep\Desktop\project web\bootcamp-new\react_mini_project\mini-project-react\src\assets"
-    alt="Logo Nextstream"
-    height="50"
-    className="d-inline-block align-top"
-  />
-</Navbar.Brand>
+        <Navbar.Brand  href="/" style={{ fontWeight:'700', fontSize: '24px' }}>
+        NEXT
+        <span style={{ color: 'rgb(36, 186, 239)', fontSize: '25px' }}>-STREAM</span>
+        </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

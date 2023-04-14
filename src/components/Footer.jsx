@@ -10,7 +10,8 @@ const Footer = () => {
       <Container>
         <Row>
           <Col>
-            <img src="E:\Users\asep\Desktop\project web\bootcamp-new\react_mini_project\mini-project-react\src\assets" alt="Logo" width="150" height="50" />
+             <h3 href="/" style={{ fontWeight:'700', fontSize: '20px' }}>NEXT
+        <span style={{ color: 'rgb(36, 186, 239)', fontSize: '20px' }}>-STREAM</span></h3>
             <h6>FE Batch 12</h6>
             <h6>Bootcamp dibimbing.id</h6>
           </Col>
