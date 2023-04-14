@@ -19,13 +19,17 @@ const AccountDetail = () => {
 
     useEffect(() => {
       const fetchAccount = async () => {
-        const response = await axios.get('https://api.themoviedb.org/3/account?api_key=1e05d6c6fe757614cf08f4083d927aaf&session_id=f150def54c1cb5e8529bfbc0dba258a3e78d1699');
+        const response = await axios.get('https://api.themoviedb.org/3/account?api_key=1e05d6c6fe757614cf08f4083d927aaf&session_id=ca23c1bcc9a8d350a4c4bcd017745fc5d643c940');
         setAccount(response.data);
         console.log(response.data)
       };
   
       fetchAccount();
     }, []);
+
+
+
+
 
     return (
     <div className='account'>
@@ -35,12 +39,13 @@ const AccountDetail = () => {
       {account ? (
         <>
           <img
-            src={`https://www.gravatar.com/avatar/${account.avatar.gravatar.hash}`}
+            src={`https://www.themoviedb.org/t/p/w150_and_h150_face${account.avatar.tmdb.avatar_path}`}
             alt="Gravatar"
           />
            <div className='account-detail'>
             <h4>Username : {account.username}</h4>
             <h4>Name : {account.name}</h4>
+            <h4>ID : {account.id}</h4>
             </div>
         </>
       ) : (
@@ -52,8 +57,9 @@ const AccountDetail = () => {
       <button className='logout-button'
       onClick={() =>{
         localStorage.removeItem('token')
+        localStorage.removeItem('session_id');
         navigate('/login');
-        alert("Logout success!");
+        alert("You Will Be Logout!");
       } }>LOGOUT</button>
     </div>
     

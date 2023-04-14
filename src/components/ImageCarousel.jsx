@@ -29,7 +29,7 @@ const ImageCarousel = () => {
               style={{ maxHeight: "700px", objectFit: "cover",  objectPosition: "top" }}
             />
             <BootstrapCarousel.Caption  className="carousel-caption">
-              <h3 style={{ color: 'white', fontSize: '50px', textShadow: "2px 2px 4px #000000" }}>{item.title}</h3>
+              <h3 style={{ color: 'white', fontSize: '40px', textShadow: "2px 2px 4px #000000" }}>{item.title}</h3>
             </BootstrapCarousel.Caption>
           </BootstrapCarousel.Item>
         ))}

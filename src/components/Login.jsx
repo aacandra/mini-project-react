@@ -1,77 +1,94 @@
-import React, { useState, useEffect } from 'react';
-import "../style.css";
+import React from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // import useNavigate
-import Account from './Account'; // import komponen Account
+import { useNavigate } from 'react-router-dom';
+import Account from './Account';
+
+const API_KEY = '1e05d6c6fe757614cf08f4083d927aaf';
 
 const Login = () => {
-  const navigate = useNavigate(); // inisialisasi useNavigate
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');  
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       username: '',
       password: '',
-      request_token: ''
     },
-    onSubmit: values => {
+    onSubmit: async (values) => {
       const username = values.username;
       const password = values.password;
-      const request_token = values.request_token;
-      
-      axios.post('https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=1e05d6c6fe757614cf08f4083d927aaf', {
-        username: username,
-        password: password,
-        request_token: request_token
-      })
 
-      .then(result => {
-         console.log(result.data); 
-         alert('Login Succesful')
-         localStorage.setItem('token', result.data.request_token)
-         navigate('/account')
-      })
-      .catch(error => {
-        alert('Service Error, Username dan Password did not match ')
+      try {
+        const response1 = await axios.get(
+          `https://api.themoviedb.org/3/authentication/token/new?api_key=${API_KEY}`
+        );
+
+        const response2 = await axios.post(
+          `https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=${API_KEY}`,
+          {
+            username: username,
+            password: password,
+            request_token: response1.data.request_token,
+          }
+        );
+
+        const token = response2.data.request_token;
+        localStorage.setItem('token', token);
+
+        const response3 = await axios.post(
+          `https://api.themoviedb.org/3/authentication/session/new?api_key=${API_KEY}`,
+          {
+            request_token: token,
+          }
+        );
+
+        const sessionId = response3.data.session_id;
+        localStorage.setItem('session_id', sessionId);
+        alert('Login success!');
+
+        navigate('/account');
+      } catch (error) {
+        alert('Service Error, Username dan Password did not match ');
         console.log(error);
-         
-      });
+      }
     },
   });
 
-   
-
   return (
     <>
-     <div className='login-page'>
-      <form className='login-form' onSubmit={formik.handleSubmit}>
+      <div className="login-page">
         <div>
-          <label htmlFor="username">Username</label>
-          <input className='input-form'
-            id="username"
-            name="username"
-            type="text"
-            onChange={formik.handleChange}
-            value={formik.values.username}
-          />
+          <h2>Login Page</h2>
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input className='input-form'
-            id="password"
-            name="password"
-            type="password"
-            onChange={formik.handleChange}
-            value={formik.values.password}
-          />
-        </div>
-        <button type="submit">Submit</button>
-        <div id="login-message"></div>
-      </form>
+        <form className="login-form" onSubmit={formik.handleSubmit}>
+          <div>
+            <label htmlFor="username">Username</label>
+            <input
+              className="input-form"
+              id="username"
+              name="username"
+              type="text"
+              onChange={formik.handleChange}
+              value={formik.values.username}
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              className="input-form"
+              id="password"
+              name="password"
+              type="password"
+              onChange={formik.handleChange}
+              value={formik.values.password}
+            />
+          </div>
+          <button type="submit">Submit</button>
+          <div id="login-message"></div>
+        </form>
       </div>
     </>
   );
-}
+};
 
 export default Login;
