@@ -26,7 +26,7 @@ const ImageCarousel = () => {
               className="d-block w-100"
               src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
               alt={item.title}
-              style={{ maxHeight: "700px", objectFit: "cover",  objectPosition: "top" }}
+              style={{ maxHeight: "600px", objectFit: "cover",  objectPosition: "top" }}
             />
             <BootstrapCarousel.Caption  className="carousel-caption">
               <h3>{item.title}</h3>

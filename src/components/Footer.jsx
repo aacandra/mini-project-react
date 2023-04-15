@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col>
-             <h3 href="/" style={{ fontWeight:'700', fontSize: '20px' }}>NEXT
+             <h3 href="/" style={{ fontWeight:'700', fontSize: '20px', padding:'0px' }}>NEXT
         <span style={{ color: 'rgb(36, 186, 239)', fontSize: '20px' }}>-STREAM</span></h3>
             <h6>FE Batch 12</h6>
             <h6>Bootcamp dibimbing.id</h6>
