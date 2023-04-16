@@ -32,13 +32,13 @@ const Login = () => {
           }
         );
 
-        const token = response2.data.request_token;
-        localStorage.setItem('token', token);
+        const requestToken = response2.data.request_token;
+        localStorage.setItem('token', requestToken);
 
         const response3 = await axios.post(
           `https://api.themoviedb.org/3/authentication/session/new?api_key=${API_KEY}`,
           {
-            request_token: token,
+            request_token: requestToken,
           }
         );
 
@@ -58,7 +58,7 @@ const Login = () => {
     <>
       <div className="login-page">
         <div>
-          <h2>Login Page</h2>
+          <h2 style={{color:'white'}}>Login Page</h2>
         </div>
         <form className="login-form" onSubmit={formik.handleSubmit}>
           <div>
@@ -84,6 +84,11 @@ const Login = () => {
             />
           </div>
           <button type="submit">Submit</button>
+          <div className='pass-clue'>
+          Try This Account <br />
+  Username : aacandra<br />
+  Pass : rakazaidan<br />
+            </div>
           <div id="login-message"></div>
         </form>
       </div>

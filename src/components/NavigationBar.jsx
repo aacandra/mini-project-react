@@ -3,8 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "../style.css"
 
+
 const NavigationBar = () => {
-    return (
+
+  const isLogin = localStorage.getItem('session_id')
+
+  
+  return (
         <div style={{backgroundColor:'black'}}>
             <Container>
         <Navbar variant="dark" expand="lg">
@@ -17,7 +22,13 @@ const NavigationBar = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/login">Login</Nav.Link>
+              { !isLogin ? (<Nav.Link href="/login">Login</Nav.Link>) :
+                (<Nav.Link href="/Account">Account</Nav.Link>)
+
+              
+            }
+
+              
               
             </Nav>
           </Navbar.Collapse>

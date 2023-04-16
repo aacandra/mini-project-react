@@ -4,17 +4,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const AccountDetail = () => {
+const AccountDetail = ({ isLoggedIn }) => {
   const [account, setAccount] = useState(null);
   const navigate = useNavigate ()
 
   
-  useEffect(() => {
-    if (!localStorage.getItem('token')) {
-       navigate('/account')
-    
-    }  
-    },[])
+ 
 
 
     useEffect(() => {
@@ -58,7 +53,7 @@ const AccountDetail = () => {
       onClick={() =>{
         localStorage.removeItem('token')
         localStorage.removeItem('session_id');
-        navigate('/login');
+        navigate('/');
         alert("You Will Be Logout!");
       } }>LOGOUT</button>
     </div>

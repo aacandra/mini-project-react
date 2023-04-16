@@ -10,37 +10,71 @@ import Account from './components/Account'
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <>
-      <NavigationBar/>
-      <Outlet/>
-    </>,
-    errorElement: <p>Page Not Found</p>,
-    children: [
-      {
-      path: "/",  
-      element: <App/>,
-      },
-      {
-        path: "/login",
-        element: 
-        <Login/>
+  //   path: "/",
+  //   element: <>
+  //     <NavigationBar/>
+  //     <Outlet/>
+  //   </>,
+  //   errorElement: <p>Page Not Found</p>,
+  //   children: [
+  //     {
+  //     path: "/",  
+  //     element: <App/>,
+  //     },
+  //     {
+  //       path: "/login",
+  //       element: 
+  //       <Login/>
         
-        },
+  //       },
 
-        {
-          path: "/account",
-          element: 
-          <Account/>,
-          }
+  //       {
+  //         path: "/account",
+  //         element: 
+  //         <Account/>,
+  //         }
 
-      ],
-  },
-  {
-    path: "/account",
-    element: 
-    <Account/>,
+  //     ],
+  // },
+  // {
+  //   path: "/account",
+  //   element: 
+  //   <Account/>,
+
+    path: "/",
+    element:
+    (<>
+    <NavigationBar/>
+    <App/>
+    {/* <Footer/> */}
+    </>),
+    errorElement: <p>Page Not Found</p>,
+    },
+
+    {
+      path: "/login",
+    element:
+    (<>
+    <NavigationBar/>
+    <Login/>
+    <Footer/>
+    </>)
+
+    },
+
+    {
+      path: "/account",
+    element:
+    (<>
+    <NavigationBar/>
+    <Account/>
+    <Footer/>
+    </>)
+
     }
+
+
+
 
     
     

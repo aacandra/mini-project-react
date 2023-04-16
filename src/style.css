@@ -168,6 +168,11 @@ background-color: black;
     color: red;
   }
 
+
+  .pass-clue {
+    color: rgb(225, 241, 250);
+    font-size: 10px;
+  }
   .input-form {
     
     margin-bottom: 1rem;
