@@ -6,4 +6,4 @@ Daftar library yang digunakan
 - Bootstrap 
 
 Fitur tambahan :
-- Tidak ada
+Project sudah dideploy & dapat di akses di https://nextstream.netlify.app/
