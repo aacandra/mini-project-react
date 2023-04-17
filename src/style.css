@@ -1,16 +1,15 @@
-*{
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .myApp {
-    margin: 0; 
-    background-image: linear-gradient(-180deg, rgb(21, 24, 24), rgb(7, 75, 100));
-    
-} 
+  margin: 0;
+  background-image: linear-gradient(-180deg, rgb(21, 24, 24), rgb(7, 75, 100));
+}
 
 .jumbo {
   height: 100vh;
-  padding : 5px;
+  padding: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -25,16 +24,12 @@
   }
   .jumbo {
     height: 50vh;
-  }  
-   
-  
+  }
 }
-
 
 .carousel-caption {
   bottom: 10;
   background-color: rgba(0, 0, 0, 0.5);
-  
 }
 
 .carousel-caption h3 {
@@ -46,250 +41,219 @@
 }
 
 .tittle {
-    padding: 20px;
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1;
-    text-shadow: 2px 2px black;
-    letter-spacing: 3px;
+  padding: 20px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 2px 2px black;
+  letter-spacing: 3px;
 }
 
 .second-tittle {
-    padding: 20px;
-    font-size: 30px;
-    font-weight: 600;
-    text-shadow: 2px 2px black
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 2px 2px black;
 }
-
 
 .trending-cards {
- display: grid;
- margin-left: 70px; 
- grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
- grid-gap: 1rem;
- margin-top: 2rem;
+  display: grid;
+  margin-left: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 2rem;
 }
-
-
 
 .movie-wrapper {
-    max-height: 25rem;
-    width: 14rem;
-    background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
-    overflow: hidden;
-    position: relative;
-    border-radius: 5px;
-    color: beige;
-  }
+  max-height: 25rem;
+  width: 14rem;
+  background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  color: beige;
+}
 
 .movie-wrapper img {
-    max-width: 15rem;
-    max-height: 21rem;
+  max-width: 15rem;
+  max-height: 21rem;
 }
 .movie-wrapper .card {
-background-color: black;
-} 
-    
-
+  background-color: black;
+}
 
 .info {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    margin: 0.5rem;
-    
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 0.5rem;
 }
 
 .overview {
-    transform: translateY(100%);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
-    padding: 10px;
-    overflow: auto;
-    margin-top: 2rem;
-    border-radius: 10px;
-    transition: 0.5s ease-in-out;
-    font-size: 15px;
-     
-    
+  transform: translateY(100%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
+  padding: 10px;
+  overflow: auto;
+  margin-top: 2rem;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+  font-size: 15px;
 }
 
 /* .overview-info {
     margin-top: 40px;
 } */
 
-
 .movie-wrapper:hover .overview {
-    transform: translateY(0%) 
-    
+  transform: translateY(0%);
 }
 
-
 .nav-link {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-    font-size: 20px;
-    font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px;
+  background: url(./assets/asset-1.jpeg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+#login-message {
+  font-size: 19px;
+  color: red;
+}
+
+.pass-clue {
+  color: rgb(225, 241, 250);
+  font-size: 10px;
+}
+.input-form {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+label[for="username"] {
+  color: rgb(255, 255, 255);
+}
+
+label[for="password"] {
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 576px) {
+  .login-page {
+    padding: 50px;
   }
+}
 
- 
+.validate-input {
+  position: relative;
+}
 
-  .login-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 150px;
-    background: url(./assets/asset-1.jpeg);
-    background-size: cover;
-    height: 100vh;
-  }
+.account {
+  height: 100vh;
+  background: url(./assets/asset-13.jpg);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .login-form {
-    
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 10px;
-  }
+.account h2 {
+  padding: 50px 50px;
+}
 
-  #login-message {
-    font-size: 19px;
-    color: red;
-  }
-
-
-  .pass-clue {
-    color: rgb(225, 241, 250);
-    font-size: 10px;
-  }
-  .input-form {
-    
-    margin-bottom: 1rem;
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
-  }
-    
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  label[for="username"] {
-    color: rgb(255, 255, 255);
-  }
-  
-  label[for="password"] {
-    color: rgb(255, 255, 255);
-  }
-  
-
-  @media screen and (max-width: 576px) {
-    .login-page {
-      padding: 50px;
-    }
-  }
-
-    
-  .validate-input{
-    position: relative;
-  }
-
- 
-
-
-
-  .account {
-    height: 100vh;
-    background: url(./assets/asset-13.jpg);
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  }
-
-   .account h2{
-    padding: 50px 50px;
-   }
-
-  .account-content {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    /* margin: 100px; */
-    /* width: 60%;
+.account-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  /* margin: 100px; */
+  /* width: 60%;
     height: 250px; */
-    background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
-    border-radius: 10px;  
-    align-items: center;
-    justify-content: center; 
+  background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
 
-  }
-
-  @media only screen and (min-width: 768px) {
-    .account-content {
-      flex-direction: row;
-      justify-content: center;
-    }
-    
-    .account-detail {
-      margin-left: 30px;
-    }
-  }
-
-  .account-content img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-  }
-
- 
-
-  .carousel {
-    height: 500px;
-    width: 100%;
-    
-  }
-
-  .carousel-indicators {
-    color: rgb(255, 255, 255);
-  }
-
-
-  @media screen and (max-width: 360px) {
-    .carousel {
-      height: 250px;
-    }
-  }
-
-
-  .logout-button{
-    
-    background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));    
+@media only screen and (min-width: 768px) {
+  .account-content {
+    flex-direction: row;
     justify-content: center;
-    margin-top: 20px;
-    padding: 10px 20px;   
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-  
   }
+
+  .account-detail {
+    margin-left: 30px;
+  }
+}
+
+.account-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.carousel {
+  height: 500px;
+  width: 100%;
+}
+
+.carousel-indicators {
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 360px) {
+  .carousel {
+    height: 250px;
+  }
+}
+
+.logout-button {
+  background-image: linear-gradient(-45deg, rgb(36, 186, 239), rgb(21, 24, 24));
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}

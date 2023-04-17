@@ -1,18 +1,18 @@
-import React from 'react';
-import { useFormik } from 'formik';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import Account from './Account';
+import React from "react";
+import { useFormik } from "formik";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Account from "./Account";
 
-const API_KEY = '1e05d6c6fe757614cf08f4083d927aaf';
+const API_KEY = "1e05d6c6fe757614cf08f4083d927aaf";
 
 const Login = () => {
   const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
     },
     onSubmit: async (values) => {
       const username = values.username;
@@ -33,7 +33,7 @@ const Login = () => {
         );
 
         const requestToken = response2.data.request_token;
-        localStorage.setItem('token', requestToken);
+        localStorage.setItem("token", requestToken);
 
         const response3 = await axios.post(
           `https://api.themoviedb.org/3/authentication/session/new?api_key=${API_KEY}`,
@@ -43,12 +43,12 @@ const Login = () => {
         );
 
         const sessionId = response3.data.session_id;
-        localStorage.setItem('session_id', sessionId);
-        alert('Login success!');
+        localStorage.setItem("session_id", sessionId);
+        alert("Login success!");
 
-        navigate('/account');
+        navigate("/account");
       } catch (error) {
-        alert('Service Error, Username dan Password did not match ');
+        alert("Service Error, Username dan Password did not match ");
         console.log(error);
       }
     },
@@ -58,7 +58,7 @@ const Login = () => {
     <>
       <div className="login-page">
         <div>
-          <h2 style={{color:'white'}}>Login Page</h2>
+          <h2 style={{ color: "white" }}>Login Page</h2>
         </div>
         <form className="login-form" onSubmit={formik.handleSubmit}>
           <div>
@@ -84,11 +84,13 @@ const Login = () => {
             />
           </div>
           <button type="submit">Submit</button>
-          <div className='pass-clue'>
-          Try This Account <br />
-  Username : aacandra<br />
-  Pass : rakazaidan<br />
-            </div>
+          <div className="pass-clue">
+            Try This Account <br />
+            Username : aacandra
+            <br />
+            Pass : rakazaidan
+            <br />
+          </div>
           <div id="login-message"></div>
         </form>
       </div>
